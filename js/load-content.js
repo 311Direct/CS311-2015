@@ -426,8 +426,8 @@ var loadContent = {
 	}
 };
 
-$(document).ready(function() {
-	// Load content for the current page
+function reloadData()
+{
 	if (window.location.href.indexOf('task-list') != -1) loadContent.taskList();
 	if (window.location.href.indexOf('project-list') != -1) loadContent.projectList();
 	if (window.location.href.indexOf('project-details') != -1) loadContent.projectDetails();
@@ -437,4 +437,8 @@ $(document).ready(function() {
 	if (window.location.href.indexOf('search') != -1) loadContent.search();
 	//if (window.location.href.indexOf('project-visualization') != -1) loadContent.projectVisualization();		// Visualization method called manually from "pert.js"
 	if (window.location.href.indexOf('project-effort-estimation') != -1) loadContent.projectEffortEstimation();
+}
+
+$(document).ready(function() {
+	reloadData();
 });
