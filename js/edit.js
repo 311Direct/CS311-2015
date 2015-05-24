@@ -1,5 +1,5 @@
 $.fn.publish = function() {
-	$popup = $(this).closest('.popup-edit');
+	$popup = $(this).closest('.field-edit');
 	var tagLsVal = $popup.children('select[data-items-field]').length;
 	var lsVal = $popup.children('select:not([data-items-field])').length;
 	if (tagLsVal) {
@@ -8,7 +8,7 @@ $.fn.publish = function() {
 	} else if (lsVal) {
 		var val = $popup.children('select').val();
 	} else {
-		var val = $popup.children('textarea').val();
+		var val = $popup.children('input').val();
 		// Don't attempt to edit, if no string value has been put in
 		if (val.trim() == '') {
 			notify.fail('specify a value');
@@ -45,7 +45,7 @@ $.fn.publish = function() {
 
 $(document).ready(function() {
 	$('.btn-edit').on('click', function() {
-		$('.popup-edit').slideToggle('slow');
+		$('.popup-edit').slideToggle('fast');
 	});
 
 	$('.btn-edit-publish').on('click', function() {
@@ -54,6 +54,6 @@ $(document).ready(function() {
 	});
 
 	$('.btn-edit-close').on('click', function() {
-		$(this).closest('.popup-edit').slideUp('slow');
+		$(this).closest('.popup-edit').slideUp('fast');
 	});
 });
