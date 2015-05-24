@@ -301,8 +301,7 @@ var loadContent = {
 			// permission. Done to maximize performance on mobile devices
 			var perms = '<ul>';
 			for (var pIndex = 0; pIndex < user.permissions.length; pIndex++) {			
-				var perm = user.permissions[pIndex].name;
-				perms += '<li>' + perm + '</li>'
+				perms += '<li>' + user.permissions[pIndex] + '</li>'
 			}
 			perms += '</ul>';
 			$('.permissions').html(perms);
