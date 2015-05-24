@@ -18,7 +18,7 @@ function doSql($sql) {
 	// Informative error handling
 	if (!$resultObj) {
 		error_log('You tried to execute the following SQL, but it had a syntax error(s):<br>' . print_r($sql, true));
-		error_log('Details: '.print_r(mysqli_error_list($conn)));
+		error_log('Details: '.mysqli_error($conn));
 		exit(1);
 	}
 	
@@ -63,11 +63,7 @@ function milestonesForTask($id) {
 }
 
 function tasksForProj($id) {
-	$sql = "SELECT T.id, T.priority, T.title, T.status, GROUP_CONCAT(U.displayName SEPARATOR ', ') AS assignees, T.startDate, T.dueDate " .
-		'FROM taskAssignee TA RIGHT JOIN task T ON TA.taskId = T.id ' .
-		'LEFT JOIN user U ON TA.username = U.username ' .
-		'WHERE projectId = ' . $id . ' ' .
-		'GROUP BY T.id';
+	$sql = "SELECT T.id, MAX(T.priority) AS priority, MAX(T.title) AS title, MAX(T.status) AS status, GROUP_CONCAT(U.displayName SEPARATOR ', ') AS assignees, AVG(T.startDate) as startDate, AVG(T.dueDate) as dueDate FROM taskAssignee TA RIGHT JOIN task T ON TA.taskId = T.id LEFT JOIN user U ON TA.username = U.username WHERE projectId = {$id} GROUP BY T.id";
 	return doSql($sql);		
 }
 
@@ -834,6 +830,7 @@ if ($act == 'PROJECT_GET') {
 		'LEFT JOIN user U ON PM.username = U.username ' .
 		'LEFT JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username ' .
 		'WHERE P.id = ' . $id;
+		
 	$project = doSql($sql)[0];
 	
 	$project['attachments'] = attFor('project', $id);
