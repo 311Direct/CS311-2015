@@ -278,7 +278,7 @@
 	
 	td:nth-child(1), td:nth-child(2)
 	{
-  	width: 7%;
+  	min-width: 7%;
 	}
 	
 	td:nth-last-child(2)
