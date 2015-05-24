@@ -82,7 +82,7 @@ class PermissionsEngine
   
   public function canCompleteRequestForOperation($permissionsValue, $intendedOperation)
   {
-    return true == (($permissionsValue & $intendedOperation) == $intendedOperation);
+    return true == (($permissionsValue & $intendedOperation) == $intendedOperation || ((P_FULL_CONTROL & $permissionsValue) == P_FULL_CONTROL));
   }
   
   /**
