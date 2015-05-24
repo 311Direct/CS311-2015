@@ -1,0 +1,33 @@
+#activity-precedence-network {
+    background: grey;
+    border: 0;
+}
+.node-task-title {
+	color: white;
+}
+.node-task-id {
+	background: rgba(255, 255, 255, 1);
+	border-radius: 5px;    
+	color: black;
+	margin-left: 9px;
+	padding: 2px 4px;
+	transition: box-shadow 2s ease-out;
+}
+.node-task-id:hover {
+	box-shadow: 0 0 20px 0 rgb(152, 255, 169);
+}
+#activity-precedence-network a:link, #activity-precedence-network a:visited, #activity-precedence-network a:hover, #activity-precedence-network a:active {
+	text-decoration: none;
+}
+#triangle {
+	background-image: url(../img/triangle.png);
+}
+
+@media (min-width: 992px) {
+	#activity-precedence-network {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-top: 0;
+		box-shadow: 0 7px 30px 0 rgba(255, 255, 255, 0.2);    
+	}
+}

@@ -1,0 +1,25 @@
+VERIFY got errything in privileges.xls, using big paper diagrams
+TODO: send privileges table to James Wilson, CC erryone else
+TODO: create (good looking) prototype from the big sheets (inc. todo-thurs-night.txt). Then email Hoa asking "is this is what you want" and "anything missing, or any additional features you would like?"
+
+func reqs = privileges system role-specific reqs (page actions for all roles) + notification system role-specific reqs
+
+func reqs groups = (1) privileges system (2) notification system
+
+non-func reqs = ilities (e.g.: the maximum delay when first entering a webpage, and the information being shown to the user)
+
+verify "notification system - role-specific" requirements by viewing "roles in sw projects" pdf
+
+verify "privileges system - role-specific" requirements by viewing use cases
+
+TODO: Privileges system - role-specific requirements
+----
+- table (all pages x all roles), then in each box, list all possible actions, then color the text segment green/yellow/red (if the role can do it etc)
++ make sure to inc "viewing info" for ea page...
+
+Other requirements:
+----
+- Which roles can attach which filetypes to a project plan
+- need to inc reqs for all types of popups (e.g. the error popup, when a user attempts to message another user, but they cant due to the privileges (defined from sw project hierarchy)
+- Proj. manager can define own roles (inc. editing & deleting roles)
+- Proj. manager can assign users to tasks

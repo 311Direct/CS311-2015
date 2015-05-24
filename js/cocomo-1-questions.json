@@ -1,0 +1,217 @@
+[
+    {
+        "question": "What is the maximum budget allocated to your project (pessimistically speaking)?",
+        "forNonEmbeddedSys": 1
+    },
+    {
+        "question": "Considering your above answer, is this enough financial resources to successfully complete your project?",
+        "forNonEmbeddedSys": 1,
+        "answers": [
+            {
+                "title": "definitely not",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0.2
+                    }
+                ]
+            },
+            {
+                "title": "only just enough",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "title": "definitely",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": -0.2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "question": "How many man-months is expected for your project to take?",
+        "forNonEmbeddedSys": 1
+    },
+    {
+        "question": "Considering your above answer, is this enough time to successfully complete your project?",
+        "forNonEmbeddedSys": 1,
+        "answers": [
+            {
+                "title": "definitely not",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0.2
+                    }
+                ]
+            },
+            {
+                "title": "it will be a tight squeeze",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "title": "Definitely",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": -0.2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "question": "What are the main technologies that your software will utilize/integrate?",
+        "forNonEmbeddedSys": 1
+    },
+    {
+        "question": "Given your above answer, were these technologies chosen based on preference, or were they enforced choices based on the software context?",
+        "forNonEmbeddedSys": 1,
+        "answers": [
+            {
+                "title": "chosen based on preference",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": -0.4
+                    },
+                    {
+                        "affects": "costlyChanges",
+                        "weight": -0.4
+                    }
+                ]
+            },
+            {
+                "title": "they were enforced by the software's context",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0.4
+                    },
+                    {
+                        "affects": "costlyChanges",
+                        "weight": 0.4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "question": "If one of your above chosen technologies had to be changed due to volatile client requirements, how likely is it that your project will overrun the initial budget & schedule estimates?",
+        "forNonEmbeddedSys": 1,
+        "answers": [
+            {
+                "title": "not likely to overrun",
+                "weightings": [
+                    {
+                        "affects": "costlyChanges",
+                        "weight": -0.2
+                    }
+                ]
+            },
+            {
+                "title": "unsure",
+                "weightings": [
+                    {
+                        "affects": "costlyChanges",
+                        "weight": 0.4
+                    }
+                ]
+            },
+            {
+                "title": "most likely will overrun",
+                "weightings": [
+                    {
+                        "affects": "costlyChanges",
+                        "weight": 0.4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "question": "Given your above answer, your experience & understanding with the client, how much confidence do you have in the client to not change their requirements during the project?",
+        "forNonEmbeddedSys": 1,
+        "answers": [
+            {
+                "title": "unlikely",
+                "weightings": [
+                    {
+                        "affects": "costlyChanges",
+                        "weight": 0.1
+                    }
+                ]
+            },
+            {
+                "title": "unsure",
+                "weightings": [
+                    {
+                        "affects": "tightConstraints",
+                        "weight": 0.2
+                    },
+                    {
+                        "affects": "costlyCHanges",
+                        "weight": 0.2
+                    }
+                ]
+            },
+            {
+                "title": "likely",
+                "weightings": [
+                    {
+                        "affects": "costlyChanges",
+                        "weight": 0.2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "question": "How many people are working in the project?",
+        "questionClass": "people-in-project"
+    },
+    {
+        "question": "How many teams are working in the project?",
+        "questionClass": "teams-in-project"
+    },
+    {
+        "question": "Describe the types of past projects that the project's worker have been in the past"
+    },
+    {
+        "question": "Considering your answer above, what was the nature of these past projects?",
+        "questionClass": "experience-with-flexible-requirements",
+        "answers": [
+            {
+                "title": "When requirements changed, the workers had scarce alternative soltion that would have met client needs",
+                "weightings": [
+                    {
+                        "affects": "xpWithFlexibleReqs",
+                        "weight": "medium"
+                    }
+                ]
+            },
+            {
+                "title": "When requirements changed, the workers had a lot of alternative solutions available to them, which would have met client needs",
+                "weightings": [
+                    {
+                        "affects": "xpWithFlexibleReqs",
+                        "weight": "high"
+                    }
+                ]
+            }
+        ]
+    }
+]

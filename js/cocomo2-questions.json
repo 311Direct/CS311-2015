@@ -1,0 +1,59 @@
+[
+  {
+    "question": "To what degree can past examples be consulted?",
+    "type" : "degree",
+    "degree_start" : 1
+  },
+  {
+    "question": "How flexible is the implementation of the project?",
+    "type" : "degree",
+    "degree_start" : 1
+  },
+  {
+    "question": "What is the certainty about the requirements?",
+    "type" : "degree",
+    "degree_start" : 1
+  },
+  {
+    "question": "How disperse is the teams working on the project (e.g. in different location)?",
+    "type" : "degree",
+    "degree_start" : 1
+  },
+  {
+    "question": "To what degree is the software development process structured and organised?",
+    "type" : "degree",
+    "degree_start" : 1
+  },
+  {
+    "question": "How reliable and complex is the project?",
+    "type" : "degree"
+  },
+  {
+    "question": "Will the project need to be reused?",
+    "type" : "degree",
+    "degree_start" : 2
+  },
+  {
+    "question": "What is the platform difficulty?",
+    "type" : "degree",
+    "degree_start" : 2
+  },
+  {
+    "question": "How capable is the personnel?",
+    "type" : "degree"
+  },
+  {
+    "question": "How experienced is the personnel?",
+    "type" : "degree"
+  },
+  {
+    "question": "To what degree is facilities available?",
+    "type" : "degree"
+  },
+  {
+    "question": "To what degree is the pressure for completing the project within the schedule?",
+    "type" : "degree",
+    "degree_end" : 5,
+    "degree_start" : 1
+  }
+ ]

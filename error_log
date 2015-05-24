@@ -1,0 +1,5 @@
+[04-May-2015 22:10:40 Australia/Melbourne] PHP Warning:  require_once(create-buttodwawadwans.php): failed to open stream: No such file or directory in /home/vitawebs/public_html/csci311/templates/footer.php on line 3
+[04-May-2015 22:10:40 Australia/Melbourne] PHP Fatal error:  require_once(): Failed opening required 'create-buttodwawadwans.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/vitawebs/public_html/csci311/templates/footer.php on line 3
+[04-May-2015 23:32:14 Australia/Melbourne] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/vitawebs/public_html/csci311/templates/footer.php on line 2
+[04-May-2015 23:34:36 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '<' in /home/vitawebs/public_html/csci311/templates/footer.php on line 5
+[04-May-2015 23:35:46 Australia/Melbourne] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/vitawebs/public_html/csci311/templates/footer.php on line 3

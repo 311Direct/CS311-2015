@@ -1,0 +1,38 @@
+{
+    "types": [
+        {
+            "type": "ILF",
+            "title": "file where data is stored"
+        },
+        {
+            "type": "EIF",
+            "title": "referenced external interface"
+        },
+        {
+            "type": "EI",
+            "title": "use or process input"
+        },
+        {
+            "type": "EO",
+            "title": "output involving calculations"
+        },
+        {
+            "type": "EQ",
+            "title": "output not involving calculations"
+        }
+    ],
+    "complexities": [
+        {
+            "level": "low",
+            "title": "simple"
+        },
+        {
+            "level": "medium",
+            "title": "sophisticated"
+        },
+        {
+            "level": "high",
+            "title": "very complex"
+        }
+    ]
+}

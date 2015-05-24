@@ -1,0 +1,40 @@
+#activity-precedence-network {
+	background: grey;
+	border: 0;
+}
+.pert-circle {
+	background: rgba(255, 150, 150, 0.8);
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-top-right-radius: 50%;
+	height: 70px;
+	font-variant: small-caps;
+	font-weight: bold;
+	padding-top: 20px;
+	text-align: center;    
+	width: 70px;
+}
+.pert-start {
+}
+.pert-finish {
+}
+.pert-node {
+	background: white;
+	color: black;
+}
+.pert-node td {
+	width: 20px;
+}
+
+#triangle {
+	background-image: url(../img/triangle.png);
+}
+
+@media (min-width: 992px) {
+	#activity-precedence-network {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-top: 0;
+		box-shadow: 0 7px 30px 0 rgba(255, 255, 255, 0.2);    
+	}
+}

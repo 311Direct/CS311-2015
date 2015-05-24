@@ -1,0 +1,908 @@
+[19-May-2015 19:43:40 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1152
+[19-May-2015 19:43:40 Australia/Melbourne] PHP Notice:  Undefined index: userProjects in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1178
+[19-May-2015 19:43:40 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO userBelongsToProject (username, projectId) VALUES (ABCXYZ, )
+[19-May-2015 21:39:06 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 243
+[19-May-2015 21:39:06 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 123
+[19-May-2015 21:42:26 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [username] => thinkfast2008
+            [displayName] => Michael Nguyen
+        )
+
+)
+
+[19-May-2015 21:42:52 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [username] => thinkfast2008
+            [displayName] => Michael Nguyen
+        )
+
+)
+
+[19-May-2015 21:43:37 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [username] => thinkfast2008
+            [displayName] => Michael Nguyen
+        )
+
+)
+
+[19-May-2015 21:43:37 Australia/Melbourne] Array
+(
+    [0] => thinkfast2008
+)
+
+[19-May-2015 21:44:29 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [username] => thinkfast2008
+            [displayName] => Michael Nguyen
+        )
+
+)
+
+[19-May-2015 21:44:29 Australia/Melbourne] Array
+(
+    [0] => thinkfast2008
+)
+
+[19-May-2015 21:45:31 Australia/Melbourne] SELECT P.title, P.creatorUserId, U.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username WHERE P.id = 2
+[19-May-2015 21:49:39 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[19-May-2015 21:51:33 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 243
+[19-May-2015 21:51:33 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 123
+[19-May-2015 21:52:35 Australia/Melbourne] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array' at line 1
+[19-May-2015 23:50:14 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 1
+[19-May-2015 23:52:34 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 1
+[19-May-2015 23:53:14 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 1
+[19-May-2015 23:53:22 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 1
+[19-May-2015 23:53:25 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 1
+[19-May-2015 23:58:57 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[19-May-2015 23:58:58 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[19-May-2015 23:59:09 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[19-May-2015 23:59:26 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:02:36 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:03:02 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:03:17 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:03:45 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:03:51 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 2
+[20-May-2015 00:07:33 Australia/Melbourne] SELECT M.id, M.title, M.creatorUsername, U.displayName, M.createdDate, M.dueDate, M.endDate, M.projectId, M.status, M.allocatedBudget, M.usedBudget, M.allocatedTime, M.usedTime, M.description FROM milestone M JOIN user U ON M.creatorUsername = U.username WHERE M.id = 2
+[20-May-2015 00:08:17 Australia/Melbourne] SELECT M.id, M.title, M.creatorUsername, U.displayName, M.createdDate, M.dueDate, M.endDate, M.projectId, M.status, M.allocatedBudget, M.usedBudget, M.allocatedTime, M.usedTime, M.description FROM milestone M JOIN user U ON M.creatorUsername = U.username WHERE M.id = 2
+[20-May-2015 00:09:23 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 793
+[20-May-2015 00:16:40 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:16:40 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:16:42 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:04 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:04 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:19 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:19 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:23 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:23 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:23 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:26 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:26 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:26 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:30 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:30 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:35 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:52 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:52 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:59 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:17:59 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:18:05 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:18:14 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:18:15 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:18:15 Australia/Melbourne] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 788
+[20-May-2015 00:25:55 Australia/Melbourne] PHP Notice:  Undefined variable: _SESSION in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 791
+[20-May-2015 00:25:55 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 792
+[20-May-2015 00:25:55 Australia/Melbourne] PHP Notice:  Undefined variable: _SESSION in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 796
+[20-May-2015 00:25:55 Australia/Melbourne] PHP Notice:  Use of undefined constant json - assumed 'json' in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 799
+[20-May-2015 00:25:55 Australia/Melbourne] PHP Fatal error:  Call to undefined function encode() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 799
+[20-May-2015 00:26:22 Australia/Melbourne] PHP Notice:  Use of undefined constant json - assumed 'json' in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 800
+[20-May-2015 00:26:22 Australia/Melbourne] PHP Fatal error:  Call to undefined function encode() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 800
+[20-May-2015 00:26:47 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO subtask (taskId, parentTaskId) VALUES (, 11)
+[20-May-2015 00:28:19 Australia/Melbourne] PHP Notice:  Undefined index: milestoneTasks in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1056
+[20-May-2015 00:28:19 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1057
+[20-May-2015 00:28:37 Australia/Melbourne] INSERT INTO workLog (username, taskId, hours, datetime, roleCode) VALUES ('test', 2, 1, 'NOW()', 'projectManager')
+[20-May-2015 00:28:45 Australia/Melbourne] INSERT INTO workLog (username, taskId, hours, datetime, roleCode) VALUES ('test', 11, 1, 'NOW()', 'projectManager')
+[20-May-2015 00:28:49 Australia/Melbourne] INSERT INTO workLog (username, taskId, hours, datetime, roleCode) VALUES ('test', 2, 1, NOW(), 'projectManager')
+[20-May-2015 00:38:05 Australia/Melbourne] SELECT hours, datetime FROM workLog WHERE taskId = 2 AND username = 'test' ORDER BY datetime DESC
+[20-May-2015 00:59:00 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 275
+[20-May-2015 00:59:00 Australia/Melbourne] PHP Fatal error:  Call to undefined function saveApprovalReqEdit() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 143
+[20-May-2015 00:59:40 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 275
+[20-May-2015 00:59:40 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO approvalRequestSql (approvalRequestId, sql) VALUES (18, UPDATE project SET title = 'dwadwa' WHERE id = '2')
+[20-May-2015 01:00:28 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 275
+[20-May-2015 01:00:28 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO approvalRequestSql (approvalRequestId, sql) VALUES (19, "UPDATE project SET title = 'dwa' WHERE id = '2'")
+[20-May-2015 01:01:14 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 275
+[20-May-2015 01:07:11 Australia/Melbourne] no hit
+[20-May-2015 01:07:12 Australia/Melbourne] no hit
+[20-May-2015 01:07:12 Australia/Melbourne] no hit
+[20-May-2015 01:07:16 Australia/Melbourne] no hit
+[20-May-2015 01:07:17 Australia/Melbourne] no hit
+[20-May-2015 01:07:21 Australia/Melbourne] no hit
+[20-May-2015 01:07:22 Australia/Melbourne] no hit
+[20-May-2015 01:07:26 Australia/Melbourne] no hit
+[20-May-2015 01:07:30 Australia/Melbourne] no hit
+[20-May-2015 01:07:30 Australia/Melbourne] no hit
+[20-May-2015 01:07:31 Australia/Melbourne] no hit
+[20-May-2015 01:07:35 Australia/Melbourne] no hit
+[20-May-2015 01:07:36 Australia/Melbourne] no hit
+[20-May-2015 01:07:40 Australia/Melbourne] no hit
+[20-May-2015 01:07:41 Australia/Melbourne] no hit
+[20-May-2015 01:07:45 Australia/Melbourne] no hit
+[20-May-2015 01:07:46 Australia/Melbourne] no hit
+[20-May-2015 01:08:56 Australia/Melbourne] thinkfast2008
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:11:03 Australia/Melbourne] PHP Fatal error:  Call to undefined function doSql() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 155
+[20-May-2015 01:12:35 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 276
+[20-May-2015 01:12:46 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 276
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:50 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:50 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:51 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:51 Australia/Melbourne] 
+[20-May-2015 01:13:57 Australia/Melbourne] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 16
+[20-May-2015 01:13:57 Australia/Melbourne] 
+[20-May-2015 01:16:56 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[20-May-2015 17:43:41 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO subtask (taskId, parentTaskId) VALUES (, 12)
+[20-May-2015 17:58:21 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[20-May-2015 17:59:22 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[20-May-2015 22:48:09 Australia/Melbourne] PHP Notice:  Undefined index: milestoneTasks in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1078
+[20-May-2015 22:48:09 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1079
+[20-May-2015 22:51:13 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO subtask (taskId, parentTaskId) VALUES (, 13)
+[20-May-2015 22:51:21 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO subtask (taskId, parentTaskId) VALUES (, 14)
+[20-May-2015 22:52:26 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1193
+[20-May-2015 22:52:26 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO userBelongsToProject (username, projectId) VALUES (sbranks, 2)
+[20-May-2015 22:52:30 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1193
+[20-May-2015 22:52:30 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO userBelongsToProject (username, projectId) VALUES (sbranks, 2)
+[20-May-2015 22:52:30 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1193
+[20-May-2015 22:52:30 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO userBelongsToProject (username, projectId) VALUES (sbranks, 2)
+[20-May-2015 23:23:32 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>INSERT INTO task (id, priority, title, projectId, status, allocatedBudget, allocatedTime, usedBudget, usedTime, startDate, dueDate, endDate, description) VALUES (NULL, 'critical', '', , 'open', 10000, 1000, 0, 0, '', '', '', '')
+[20-May-2015 23:28:13 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 639
+[20-May-2015 23:28:17 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 639
+[20-May-2015 23:29:43 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1193
+[20-May-2015 23:29:47 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 832
+[20-May-2015 23:29:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 832
+[20-May-2015 23:31:34 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1193
+[20-May-2015 23:31:41 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 832
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:53:20 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 256
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[20-May-2015 23:54:59 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 310
+[21-May-2015 00:03:58 Australia/Melbourne] dwa
+[21-May-2015 00:04:12 Australia/Melbourne] jmmm
+[21-May-2015 00:04:24 Australia/Melbourne] mic
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:07:13 Australia/Melbourne] PHP Warning:  strpos(): Empty needle in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 258
+[21-May-2015 00:10:57 Australia/Melbourne] SELECT U.username, U.displayName, SUM(W.hours) AS manhours FROM workLog W JOIN user U ON W.username = U.username WHERE U.username LIKE "%think%" GROUP BY U.username
+[21-May-2015 00:13:36 Australia/Melbourne] SELECT U.username, U.displayName, IFNULL(SUM(W.hours), 0) AS manhours FROM workLog W RIGHT JOIN user U ON W.username = U.username WHERE U.username LIKE "%%" GROUP BY U.username
+[21-May-2015 00:13:45 Australia/Melbourne] SELECT U.username, U.displayName, IFNULL(SUM(W.hours), 0) AS manhours FROM workLog W RIGHT JOIN user U ON W.username = U.username WHERE U.username LIKE "%%" GROUP BY U.username
+[21-May-2015 00:14:00 Australia/Melbourne] SELECT U.username, U.displayName, IFNULL(SUM(W.hours), 0) AS manhours FROM workLog W RIGHT JOIN user U ON W.username = U.username WHERE U.displayname LIKE "%%" GROUP BY U.username
+[21-May-2015 00:14:10 Australia/Melbourne] SELECT U.username, U.displayName, IFNULL(SUM(W.hours), 0) AS manhours FROM workLog W RIGHT JOIN user U ON W.username = U.username WHERE U.username LIKE "%think%" GROUP BY U.username
+[21-May-2015 00:14:21 Australia/Melbourne] SELECT U.username, U.displayName, IFNULL(SUM(W.hours), 0) AS manhours FROM workLog W RIGHT JOIN user U ON W.username = U.username WHERE U.displayname LIKE "%abstrac%" GROUP BY U.username
+[21-May-2015 00:14:23 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 838
+[21-May-2015 00:18:05 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[21-May-2015 00:18:31 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[21-May-2015 00:18:39 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[21-May-2015 00:46:05 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 643
+[21-May-2015 14:56:39 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT T.title, P.Id AS projectId, P.title AS projectTitle, T.priority, T.status, T.allocatedBudget, T.usedBudget, T.allocatedTime, T.usedTime, T.startDate, T.dueDate, T.endDate, T.description, T.id FROM task T JOIN project P ON T.projectId = P.id WHERE T.id = Michael%20Nguyen,%20Michael%20Nguyen
+[21-May-2015 19:22:53 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [priority] => high
+            [title] => New title
+            [status] => open
+            [assignees] => Michael Nguyen, Michael Nguyen
+            [startDate] => 2015-05-14
+            [dueDate] => 2015-05-16
+            [duration] => 2
+            [left] => Array
+                (
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [id] => 3
+            [priority] => low
+            [title] => Have the activity precedence diagram on visualization webpage
+            [status] => in progress
+            [assignees] => Mr test user, Michael Nguyen
+            [startDate] => 2015-05-12
+            [dueDate] => 2015-05-14
+            [duration] => 2
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [id] => 4
+            [priority] => trivial
+            [title] => Elicit requirements for ATM keypad
+            [status] => closed
+            [assignees] => Michael Naws, Michael Nguyen, Michael Naws, Stephanie Branks, Michael Naws, Michael Nguyen
+            [startDate] => 2015-05-06
+            [dueDate] => 2015-05-14
+            [duration] => 8
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9
+                        )
+
+                )
+
+        )
+
+    [3] => Array
+        (
+            [id] => 6
+            [priority] => high
+            [title] => Example new task
+            [status] => suspended
+            [assignees] => Michael Naws
+            [startDate] => 2015-05-16
+            [dueDate] => 2015-05-19
+            [duration] => 3
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+        )
+
+    [4] => Array
+        (
+            [id] => 9
+            [priority] => low
+            [title] => wadawdaresfesr
+            [status] => suspended
+            [assignees] => Mark Bono, Stephanie Branks, Jay Zed
+            [startDate] => 2015-05-16
+            [dueDate] => 2015-05-17
+            [duration] => 1
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+            [right] => Array
+                (
+                )
+
+        )
+
+)
+
+[21-May-2015 19:25:59 Australia/Melbourne] Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [priority] => high
+            [title] => New title
+            [status] => open
+            [assignees] => Michael Nguyen, Michael Nguyen
+            [startDate] => 2015-05-14
+            [dueDate] => 2015-05-16
+            [duration] => 2
+            [left] => Array
+                (
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [id] => 3
+            [priority] => low
+            [title] => Have the activity precedence diagram on visualization webpage
+            [status] => in progress
+            [assignees] => Mr test user, Michael Nguyen
+            [startDate] => 2015-05-12
+            [dueDate] => 2015-05-14
+            [duration] => 2
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [id] => 4
+            [priority] => trivial
+            [title] => Elicit requirements for ATM keypad
+            [status] => closed
+            [assignees] => Michael Naws, Michael Nguyen, Michael Naws, Stephanie Branks, Michael Naws, Michael Nguyen
+            [startDate] => 2015-05-06
+            [dueDate] => 2015-05-14
+            [duration] => 8
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 6
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9
+                        )
+
+                )
+
+        )
+
+    [3] => Array
+        (
+            [id] => 6
+            [priority] => high
+            [title] => Example new task
+            [status] => suspended
+            [assignees] => Michael Naws
+            [startDate] => 2015-05-16
+            [dueDate] => 2015-05-19
+            [duration] => 3
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                        )
+
+                )
+
+            [right] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+        )
+
+    [4] => Array
+        (
+            [id] => 9
+            [priority] => low
+            [title] => wadawdaresfesr
+            [status] => suspended
+            [assignees] => Mark Bono, Stephanie Branks, Jay Zed
+            [startDate] => 2015-05-16
+            [dueDate] => 2015-05-17
+            [duration] => 1
+            [left] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                        )
+
+                )
+
+            [right] => Array
+                (
+                )
+
+        )
+
+)
+
+[21-May-2015 20:45:13 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 650
+[21-May-2015 20:45:13 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 656
+[21-May-2015 20:45:17 Australia/Melbourne] bCrumbs(): attempted to generate breadcrumbs, but encountered an unknown page type
+[21-May-2015 20:45:17 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 650
+[21-May-2015 20:45:17 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 656
+[21-May-2015 20:45:25 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 650
+[21-May-2015 20:45:25 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 656
+[21-May-2015 20:46:12 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 650
+[21-May-2015 20:46:12 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 656
+[21-May-2015 20:46:47 Australia/Melbourne] project
+[21-May-2015 20:46:47 Australia/Melbourne] http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:46:47 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 653
+[21-May-2015 20:46:47 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 659
+[21-May-2015 20:48:01 Australia/Melbourne] pg: project
+[21-May-2015 20:48:01 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:48:01 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 654
+[21-May-2015 20:48:01 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 660
+[21-May-2015 20:53:07 Australia/Melbourne] pg: project
+[21-May-2015 20:53:07 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:53:07 Australia/Melbourne] PHP Notice:  Undefined variable: Crumbs in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 659
+[21-May-2015 20:53:07 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 665
+[21-May-2015 20:53:31 Australia/Melbourne] pg: project
+[21-May-2015 20:53:31 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:53:31 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 665
+[21-May-2015 20:54:29 Australia/Melbourne] pg: project
+[21-May-2015 20:54:29 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:54:29 Australia/Melbourne] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 665
+[21-May-2015 20:55:20 Australia/Melbourne] pg: project
+[21-May-2015 20:55:20 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:55:25 Australia/Melbourne] pg: project
+[21-May-2015 20:55:25 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 20:55:46 Australia/Melbourne] pg: task
+[21-May-2015 20:55:46 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 20:55:46 Australia/Melbourne] bCrumbs(): attempted to generate breadcrumbs, but encountered an unknown page type
+[21-May-2015 20:56:32 Australia/Melbourne] pg: task
+[21-May-2015 20:56:32 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 20:56:32 Australia/Melbourne] PHP Fatal error:  Call to undefined function projForTask() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 626
+[21-May-2015 20:58:22 Australia/Melbourne] pg: task
+[21-May-2015 20:58:22 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 20:58:22 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT projectId FROM task WHERE id = http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:00:54 Australia/Melbourne] pg: task
+[21-May-2015 21:00:54 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:00:54 Australia/Melbourne] bCrumbs(): attempted to generate breadcrumbs, but encountered an unknown page type
+[21-May-2015 21:01:11 Australia/Melbourne] pg: task
+[21-May-2015 21:01:11 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:01:11 Australia/Melbourne] bCrumbs(): attempted to generate breadcrumbs, but encountered an unknown page type
+[21-May-2015 21:01:56 Australia/Melbourne] pg: task
+[21-May-2015 21:01:56 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:02:53 Australia/Melbourne] pg: task
+[21-May-2015 21:02:53 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:03:07 Australia/Melbourne] pg: task
+[21-May-2015 21:03:07 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:03:20 Australia/Melbourne] pg: project
+[21-May-2015 21:03:20 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:04:21 Australia/Melbourne] pg: project
+[21-May-2015 21:04:21 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:04:37 Australia/Melbourne] pg: project
+[21-May-2015 21:04:37 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:04:47 Australia/Melbourne] pg: task
+[21-May-2015 21:04:47 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:05:07 Australia/Melbourne] pg: project
+[21-May-2015 21:05:07 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:05:41 Australia/Melbourne] pg: project
+[21-May-2015 21:05:41 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:05:56 Australia/Melbourne] pg: task
+[21-May-2015 21:05:56 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:06:03 Australia/Melbourne] pg: project
+[21-May-2015 21:06:03 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:06:17 Australia/Melbourne] pg: project
+[21-May-2015 21:06:17 Australia/Melbourne] id: 1
+[21-May-2015 21:07:19 Australia/Melbourne] pg: project
+[21-May-2015 21:07:19 Australia/Melbourne] id: 1
+[21-May-2015 21:07:19 Australia/Melbourne] 
+[21-May-2015 21:08:17 Australia/Melbourne] PHP Parse error:  syntax error, unexpected end of file in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1515
+[21-May-2015 21:08:17 Australia/Melbourne] PHP Parse error:  syntax error, unexpected end of file in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1515
+[21-May-2015 21:08:17 Australia/Melbourne] PHP Parse error:  syntax error, unexpected end of file in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1515
+[21-May-2015 21:08:18 Australia/Melbourne] PHP Parse error:  syntax error, unexpected end of file in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1515
+[21-May-2015 21:08:33 Australia/Melbourne] pg: project
+[21-May-2015 21:08:33 Australia/Melbourne] id: 1
+[21-May-2015 21:09:18 Australia/Melbourne] pg: project
+[21-May-2015 21:09:18 Australia/Melbourne] id: 1
+[21-May-2015 21:10:03 Australia/Melbourne] pg: project
+[21-May-2015 21:10:03 Australia/Melbourne] id: 1
+[21-May-2015 21:10:33 Australia/Melbourne] pg: project
+[21-May-2015 21:10:33 Australia/Melbourne] id: 1
+[21-May-2015 21:10:41 Australia/Melbourne] pg: project
+[21-May-2015 21:10:41 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/project-list.php
+[21-May-2015 21:11:25 Australia/Melbourne] pg: project
+[21-May-2015 21:11:25 Australia/Melbourne] id: 1
+[21-May-2015 21:11:33 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[21-May-2015 21:11:35 Australia/Melbourne] pg: milestone
+[21-May-2015 21:11:35 Australia/Melbourne] id: 1
+[21-May-2015 21:11:46 Australia/Melbourne] pg: project
+[21-May-2015 21:11:46 Australia/Melbourne] id: 1
+[21-May-2015 21:11:55 Australia/Melbourne] pg: task
+[21-May-2015 21:11:55 Australia/Melbourne] id: 2
+[21-May-2015 21:12:02 Australia/Melbourne] pg: task
+[21-May-2015 21:12:02 Australia/Melbourne] id: 2
+[21-May-2015 21:12:10 Australia/Melbourne] pg: project
+[21-May-2015 21:12:10 Australia/Melbourne] id: 1
+[21-May-2015 21:12:13 Australia/Melbourne] pg: effort
+[21-May-2015 21:12:13 Australia/Melbourne] id: 1
+[21-May-2015 21:12:13 Australia/Melbourne] pg: project
+[21-May-2015 21:12:13 Australia/Melbourne] id: 1
+[21-May-2015 21:13:00 Australia/Melbourne] pg: task
+[21-May-2015 21:13:00 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/task-list.php
+[21-May-2015 21:13:27 Australia/Melbourne] pg: search.ph
+[21-May-2015 21:13:27 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/search.php
+[21-May-2015 21:14:51 Australia/Melbourne] pg: project
+[21-May-2015 21:14:51 Australia/Melbourne] id: 1
+[21-May-2015 21:15:06 Australia/Melbourne] pg: search.ph
+[21-May-2015 21:15:06 Australia/Melbourne] id: http://vitawebsitedesign.com.au/csci311_v2/search.php
+[21-May-2015 22:11:51 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1527
+[21-May-2015 22:11:51 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT Array FROM projectManager
+[21-May-2015 22:11:51 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1527
+[21-May-2015 22:11:51 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT Array FROM milestone
+[21-May-2015 22:11:51 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1527
+[21-May-2015 22:11:51 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT Array FROM task
+[21-May-2015 22:11:51 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1527
+[21-May-2015 22:11:51 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT Array FROM user
+[21-May-2015 22:11:51 Australia/Melbourne] PHP Notice:  Array to string conversion in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1527
+[21-May-2015 22:11:51 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT Array FROM project
+[21-May-2015 23:10:31 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 32
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 1
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 4
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 26
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 32
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 1
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 2
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 4
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 25
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 26
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 27
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 28
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 29
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 30
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 31
+[21-May-2015 23:11:47 Australia/Melbourne] SELECT U.username, U.displayName FROM projectManager PM JOIN user U ON PM.username = U.username WHERE PM.projectId = 32
+[21-May-2015 23:18:00 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT DISTINCT username AS label, username AS val FROM projectManager WHERE roleCode = 'projectManager'
+[21-May-2015 23:20:22 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>UPDATE milestone SET projectId = 33 WHERE id IN ()
+[21-May-2015 23:37:28 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>UPDATE milestone SET projectId = 35 WHERE id IN ()
+[21-May-2015 23:40:47 Australia/Melbourne] SELECT CONCAT('T-', id, ': ', title) AS label, id AS val FROM task
+[21-May-2015 23:40:47 Australia/Melbourne] SELECT DISTINCT username AS label, username AS val FROM user
+[21-May-2015 23:40:47 Australia/Melbourne] SELECT CONCAT('M-', id, ': ', title) AS label, id AS val FROM milestone
+[21-May-2015 23:40:47 Australia/Melbourne] SELECT username AS label, username AS val FROM user
+[21-May-2015 23:40:48 Australia/Melbourne] SELECT CONCAT('P-', id, ': ', title) AS label, id AS val FROM project
+[21-May-2015 23:42:14 Australia/Melbourne] milestone
+[21-May-2015 23:42:14 Australia/Melbourne] SELECT CONCAT('M-', id, ': ', title) AS label, id AS val FROM milestone
+[21-May-2015 23:42:14 Australia/Melbourne] user
+[21-May-2015 23:42:14 Australia/Melbourne] SELECT DISTINCT username AS label, username AS val FROM user
+[21-May-2015 23:42:14 Australia/Melbourne] task
+[21-May-2015 23:42:14 Australia/Melbourne] SELECT CONCAT('T-', id, ': ', title) AS label, id AS val FROM task
+[21-May-2015 23:42:14 Australia/Melbourne] user
+[21-May-2015 23:42:14 Australia/Melbourne] SELECT username AS label, username AS val FROM user
+[21-May-2015 23:42:14 Australia/Melbourne] project
+[21-May-2015 23:42:14 Australia/Melbourne] SELECT CONCAT('P-', id, ': ', title) AS label, id AS val FROM project
+[21-May-2015 23:46:49 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>UPDATE milestone SET projectId = 36 WHERE id IN ()
+[22-May-2015 00:06:57 Australia/Melbourne] PHP Warning:  Invalid argument supplied for foreach() in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 1202
+[22-May-2015 00:10:43 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 124
+[22-May-2015 00:44:25 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:25 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:25 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:50 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:50 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:50 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:44:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:47:01 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:47:01 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:47:01 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:30 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:30 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:30 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:48:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 131
+[22-May-2015 00:49:26 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "michaeln" GROUP BY W.username
+[22-May-2015 00:49:26 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:49:26 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "thinkfast2008" GROUP BY W.username
+[22-May-2015 00:49:26 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:49:26 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "hansm" GROUP BY W.username
+[22-May-2015 00:49:26 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:52:46 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 00:52:46 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 570
+[22-May-2015 00:53:45 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 00:53:45 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 570
+[22-May-2015 00:53:54 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 00:53:54 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 570
+[22-May-2015 00:54:27 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "michaeln" GROUP BY W.username
+[22-May-2015 00:54:27 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:54:27 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "thinkfast2008" GROUP BY W.username
+[22-May-2015 00:54:27 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:54:27 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "hansm" GROUP BY W.username
+[22-May-2015 00:55:16 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "michaeln" GROUP BY W.username
+[22-May-2015 00:55:16 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:55:16 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "thinkfast2008" GROUP BY W.username
+[22-May-2015 00:55:16 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:55:16 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "hansm" GROUP BY W.username
+[22-May-2015 00:55:43 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "michaeln" GROUP BY W.username
+[22-May-2015 00:55:43 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:55:43 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "thinkfast2008" GROUP BY W.username
+[22-May-2015 00:55:43 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 134
+[22-May-2015 00:55:43 Australia/Melbourne] SELECT W.username, IFNULL(SUM(W.hours), 0) AS manhours FROM tasksInMilestone TIM RIGHT JOIN workLog W ON TIM.taskId = W.taskId WHERE TIM.taskId IN ( SELECT taskId FROM tasksInMilestone WHERE milestoneId = 2 ) AND W.username = "hansm" GROUP BY W.username
+[22-May-2015 01:03:16 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 01:03:16 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 01:12:58 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 01:12:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 01:13:46 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 01:13:46 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 01:36:01 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 01:36:01 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 19:41:26 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 19:41:26 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[22-May-2015 19:54:58 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[22-May-2015 19:54:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[23-May-2015 00:26:26 Australia/Melbourne] project
+[23-May-2015 00:26:26 Australia/Melbourne] 1
+[23-May-2015 00:26:26 Australia/Melbourne] TAILORED_tasks
+[23-May-2015 00:26:26 Australia/Melbourne] 2,3,4
+[23-May-2015 00:27:01 Australia/Melbourne] project
+[23-May-2015 00:27:01 Australia/Melbourne] 1
+[23-May-2015 00:27:01 Australia/Melbourne] TAILORED_tasks
+[23-May-2015 00:27:01 Australia/Melbourne] 2,4,8,16
+[23-May-2015 00:27:38 Australia/Melbourne] project
+[23-May-2015 00:27:38 Australia/Melbourne] 1
+[23-May-2015 00:27:38 Australia/Melbourne] TAILORED_tasks
+[23-May-2015 00:27:38 Australia/Melbourne] 8
+[23-May-2015 00:31:50 Australia/Melbourne] project
+[23-May-2015 00:31:50 Australia/Melbourne] 1
+[23-May-2015 00:31:50 Australia/Melbourne] TAILORED_tasks
+[23-May-2015 00:31:50 Australia/Melbourne] 2,3,6,4,9
+[23-May-2015 00:32:16 Australia/Melbourne] project
+[23-May-2015 00:32:16 Australia/Melbourne] 2
+[23-May-2015 00:32:16 Australia/Melbourne] TAILORED_projectManagers
+[23-May-2015 00:32:16 Australia/Melbourne] test
+[23-May-2015 00:32:16 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 00:32:33 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 568
+[23-May-2015 00:32:33 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 569
+[23-May-2015 00:33:46 Australia/Melbourne] project
+[23-May-2015 00:33:46 Australia/Melbourne] 2
+[23-May-2015 00:33:46 Australia/Melbourne] TAILORED_tasks
+[23-May-2015 00:33:46 Australia/Melbourne] 8
+[23-May-2015 00:35:24 Australia/Melbourne] SELECT T.id, T.priority, T.title, T.status, GROUP_CONCAT(U.displayName SEPARATOR ', ') AS assignees, T.startDate, T.dueDate FROM taskAssignee TA JOIN task T ON TA.taskId = T.id JOIN user U ON TA.username = U.username WHERE projectId = 2 GROUP BY T.id
+[23-May-2015 00:40:00 Australia/Melbourne] SELECT T.id, T.priority, T.title, T.status, GROUP_CONCAT(U.displayName SEPARATOR ', ') AS assignees, T.startDate, T.dueDate FROM taskAssignee TA RIGHT JOIN task T ON TA.taskId = T.id LEFT JOIN user U ON TA.username = U.username WHERE projectId = 2 GROUP BY T.id
+[23-May-2015 00:53:13 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:53:13 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:53:13 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:53:13 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 00:54:39 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:54:39 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:54:39 Australia/Melbourne] PHP Notice:  Undefined variable: tId in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 494
+[23-May-2015 00:54:39 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>Array
+(
+    [0] => DELETE FROM taskAssignee WHERE taskId = 8
+    [1] => INSERT INTO taskAssignee (taskId, username) VALUES (, abstracts)
+    [2] => INSERT INTO taskAssignee (taskId, username) VALUES (, jayz)
+    [3] => INSERT INTO taskAssignee (taskId, username) VALUES (, hansm)
+)
+
+[23-May-2015 00:55:54 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>Array
+(
+    [0] => DELETE FROM taskAssignee WHERE taskId = 8
+    [1] => INSERT INTO taskAssignee (taskId, username) VALUES (8, ABCXYZ)
+    [2] => INSERT INTO taskAssignee (taskId, username) VALUES (8, blecha)
+    [3] => INSERT INTO taskAssignee (taskId, username) VALUES (8, jayz)
+)
+
+[23-May-2015 00:57:45 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 00:57:52 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 967
+[23-May-2015 00:58:25 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 00:58:31 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 967
+[23-May-2015 00:58:57 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 967
+[23-May-2015 00:59:02 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 967
+[23-May-2015 00:59:46 Australia/Melbourne] SELECT U.displayName, U.username, U.expertise, P.role FROM user U JOIN permission P ON U.roleCode = P.roleCode WHERE U.username = "ABCXYZ" LIMIT 1
+[23-May-2015 00:59:46 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 970
+[23-May-2015 01:03:00 Australia/Melbourne] SELECT U.displayName, U.username, U.expertise, IFNULL(P.role, 'unknown') FROM user U LEFT JOIN permission P ON U.roleCode = P.roleCode WHERE U.username = "ABCXYZ" LIMIT 1
+[23-May-2015 01:08:35 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:08:45 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:11:54 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:15:39 Australia/Melbourne] SELECT M.id, M.title FROM tasksInMilestone TIM JOIN milestone M ON TIM.milestoneId = M.id WHERE taskId = 8
+[23-May-2015 01:20:51 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:21:11 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:23:37 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:26:39 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>Array
+(
+    [0] => DELETE FROM tasksInMilestone WHERE taskId = 8
+    [1] => INSERT INTO tasksInMilestone (taskId, milestoneId) VALUES (8, )
+)
+
+[23-May-2015 01:27:34 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:27:50 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:29:07 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:07 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:09 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:11 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:12 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:12 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:35 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 776
+[23-May-2015 01:29:58 Australia/Melbourne] SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description FROM projectManager PM JOIN project P ON PM.projectId = P.id JOIN user U ON PM.username = U.username JOIN user U_CREATOR ON P.creatorUserId = U_CREATOR.username WHERE P.id = 3
+[23-May-2015 01:29:58 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 779
+[23-May-2015 01:42:10 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT roleCode FROM permission WHERE role = quality assurance
+[23-May-2015 01:44:15 Australia/Melbourne] sqlForTailoredEdit(): attempted to generated SQL for a tailored edit, but encountered an unexpected edit command
+[23-May-2015 01:44:15 Australia/Melbourne] PHP Notice:  Undefined variable: resultObj in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 17
+[23-May-2015 01:44:15 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>Array
+(
+)
+
+[23-May-2015 01:54:45 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:55:26 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 01:58:47 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>Array
+(
+    [0] => DELETE FROM taskFlag WHERE taskId = 10
+    [1] => INSERT INTO taskFlag (taskId, flag) VALUES (10, yeahh)
+)
+
+[23-May-2015 01:59:57 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:00:36 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:01:16 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:01:38 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:01:59 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:02:23 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:02:41 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 02:28:04 Australia/Melbourne] PHP Notice:  Use of undefined constant hours - assumed 'hours' in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 962
+[23-May-2015 02:29:04 Australia/Melbourne] 5400
+[23-May-2015 02:30:16 Australia/Melbourne] 2700
+[23-May-2015 02:30:16 Australia/Melbourne] 5400/2
+[23-May-2015 02:35:58 Australia/Melbourne] 100
+[23-May-2015 02:35:58 Australia/Melbourne] 2
+[23-May-2015 02:36:18 Australia/Melbourne] 100
+[23-May-2015 02:36:18 Australia/Melbourne] 2
+[23-May-2015 02:36:27 Australia/Melbourne] 100
+[23-May-2015 02:36:27 Australia/Melbourne] 2
+[23-May-2015 02:42:46 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 12:37:08 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 12:37:08 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 16:54:55 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 597
+[23-May-2015 17:04:28 Australia/Melbourne] SELECT T.id, T.priority, T.title, T.projectId, T.status, T.startDate, T.dueDate FROM tasksInMilestone TIM JOIN task T ON TIM.taskId = T.id WHERE TIM.milestoneId = 1
+[23-May-2015 17:04:28 Australia/Melbourne] SELECT T.id, T.priority, T.title, T.projectId, T.status, T.startDate, T.dueDate FROM tasksInMilestone TIM JOIN task T ON TIM.taskId = T.id WHERE TIM.milestoneId = 2
+[23-May-2015 20:04:07 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT T.title, P.Id AS projectId, P.title AS projectTitle, T.priority, T.status, T.allocatedBudget, T.usedBudget, T.allocatedTime, T.usedTime, T.startDate, T.dueDate, T.endDate, T.description, T.id FROM task T JOIN project P ON T.projectId = P.id WHERE T.id = undefined
+[23-May-2015 20:04:53 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 597
+[23-May-2015 20:26:23 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 20:26:23 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 20:28:49 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 20:28:49 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 20:48:09 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 20:48:09 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 20:50:15 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 20:50:15 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 20:59:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 597
+[23-May-2015 21:03:37 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT M.id, M.title, M.creatorUsername, U.displayName, M.createdDate, M.startDate, M.dueDate, M.endDate, M.projectId, M.status, M.allocatedBudget, M.usedBudget, M.allocatedTime, M.usedTime, M.description FROM milestone M JOIN user U ON M.creatorUsername = U.username WHERE M.id = 
+[23-May-2015 21:03:37 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>SELECT projectId FROM milestone WHERE id = 
+[23-May-2015 21:11:46 Australia/Melbourne] You tried to execute the following SQL, but it had a syntax error(s):<br>UPDATE milestone SET projectId = 38 WHERE id IN ()
+[23-May-2015 21:15:00 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/vitawebs/public_html/csci311_v2/php/notificationSystemAPI.php on line 277
+[23-May-2015 21:15:16 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 21:15:16 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[23-May-2015 21:15:51 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[23-May-2015 21:15:51 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
+[24-May-2015 00:54:40 Australia/Melbourne] PHP Notice:  Undefined index: username in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 575
+[24-May-2015 00:54:40 Australia/Melbourne] PHP Notice:  Undefined offset: 0 in /home/vitawebs/public_html/csci311_v2/php/DirectPHPApi.php on line 576
