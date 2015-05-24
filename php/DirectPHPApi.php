@@ -173,6 +173,28 @@ function dependantsForTask($id) {
 }
 
 function permsFor($username) {
+  
+  global $PERMISSIONS_ENGINE;
+  global $rolePermissions;
+  
+  $perms = $rolePermissions->getRoleInfo()->getPermissionsValue();
+  
+  $result = array();
+  if( P_FULL_CONTROL     & $perms){ array_push($result, "Full Control (Create Projects, Users)"); }
+  if( P_READ             & $perms){ array_push($result, "Read Items"); }
+  if( P_WRITE            & $perms){ array_push($result, "Write Items"); }
+  if( P_CREATE           & $perms){ array_push($result, "Create Items"); }
+  if( P_DELETE           & $perms){ array_push($result, "Delete Items"); }
+  if( P_MODIFY_ATTR      & $perms){ array_push($result, "Change Attributes"); }
+  if( P_CHANGE_ACCESS    & $perms){ array_push($result, "Change Permissions"); }
+  if( P_LIST_CONTENTS    & $perms){ array_push($result, "List Items"); }
+  if( P_INHERITS_PARENT  & $perms){ array_push($result, "Inherit Permission from Parent"); }
+  if( 0 == $perms){ array_push($result, "P_PERMISSION_UNDEF "); }    
+  
+  
+  return $result;
+  
+  /*
 	$sql = 'SELECT name ' .
 		'FROM permission ' .
 		'WHERE roleCode = (' .
@@ -181,7 +203,8 @@ function permsFor($username) {
 			'WHERE U.username = "' . $username . '" ' .
 			'LIMIT 1' .
 		')';
-	return doSql($sql);	
+	return doSql($sql);
+	*/	
 }
 
 function rolesServedForProj($username, $id) {
