@@ -1,5 +1,7 @@
 <?php
 require('Direct/config/db.config.php');
+require('../permissionsheader.php');
+
 function doSql($sql) {
 	// Connect
 	$conn = mysqli_connect('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
@@ -610,13 +612,15 @@ function milestoneForTask($id) {
 	return doSql($sql)[0];
 }
 
-function bCrumbsFor($pg, $id) {
+function bCrumbsFor($pg, $id, $rolePermissions) {
 	$bCrumbs = [];
-
+  global $PERMISSIONS_ENGINE;
+  
 	// If project manager, add "project list" to beginning of breadcrumbs.
 	// Otherwise, add "task list" to beginning of breadcrumbs.
 	$role = usrRoleCode();
-	if ($role == 'projectManager' || $role == 'developmentManager') {
+	if($PERMISSIONS_ENGINE->canCompleteRequestForOperation($rolePermissions->getRoleInfo()->getPermissionsValue(), P_FULL_CONTROL))
+	{
 		$bCrumbs[] = [
 			'label' => 'Project list',
 			'url' => 'project-list.php'
@@ -1611,7 +1615,7 @@ if ($act == 'BREADCRUMBS') {
 	
 	echo json_encode([
 		'action' => $act,
-		'payload' => bCrumbsFor($pg, $id)
+		'payload' => bCrumbsFor($pg, $id, $rolePermissions)
 	]);	
 } else
 if ($act == 'ITEM_CREATION_LIST') {
