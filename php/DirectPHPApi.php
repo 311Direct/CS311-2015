@@ -18,6 +18,7 @@ function doSql($sql) {
 	// Informative error handling
 	if (!$resultObj) {
 		error_log('You tried to execute the following SQL, but it had a syntax error(s):<br>' . print_r($sql, true));
+		error_log('Details: '.print_r(mysqli_error_list($conn)));
 		exit(1);
 	}
 	
@@ -638,18 +639,18 @@ function bCrumbsFor($pg, $id, $rolePermissions) {
 	$bCrumbs = [];
   global $PERMISSIONS_ENGINE;
   
-	// If project manager, add "project list" to beginning of breadcrumbs.
-	// Otherwise, add "task list" to beginning of breadcrumbs.
+	// If project manager, add "project List" to beginning of breadcrumbs.
+	// Otherwise, add "task List" to beginning of breadcrumbs.
 	$role = usrRoleCode();
 	if($PERMISSIONS_ENGINE->canCompleteRequestForOperation($rolePermissions->getRoleInfo()->getPermissionsValue(), P_FULL_CONTROL))
 	{
 		$bCrumbs[] = [
-			'label' => 'Project list',
+			'label' => 'Project List',
 			'url' => 'project-list.php'
 		];
 	} else {
 		$bCrumbs[] = [
-			'label' => 'Task list',
+			'label' => 'Task List',
 			'url' => 'task-list.php'
 		];			
 	}
@@ -658,7 +659,7 @@ function bCrumbsFor($pg, $id, $rolePermissions) {
 	$pageHasId = is_numeric($id);
 	if ($pg == 'task-list') {
 		$bCrumbs[] = [
-			'label' => 'task list',
+			'label' => 'task List',
 			'url' => 'task-list.php'
 		];
 	} else
@@ -1200,7 +1201,7 @@ if ($act == 'PERMISSIONS_GET') {
 			'Message training specialists',
 			'Send approval requests',
 			'Accept & reject approval requests',
-			'View project list page',
+			'View project List page',
 			'View projects they are managing'
 		]
 	]);
@@ -1646,7 +1647,7 @@ if ($act == 'ITEM_CREATION_LIST') {
 	$fields = 'username AS label, username AS val';
 	$itemType = $_POST['itemType'];
 			
-	// Determine which fields to get for the list's items
+	// Determine which fields to get for the List's items
 	$projMgrLs = false;
 	$tailoredSql = false;
 	if ($itemType == 'projectManager') {
@@ -1666,14 +1667,14 @@ if ($itemType == 'user') {
 if ($itemType == 'project') {
 		$fields = "CONCAT('P-', id, ': ', title) AS label, id AS val";
 	} else {
-		error_log('action "CREATE_SYS_ITEM_LS" attempted to get a lists items, but encountered an unknown item type "' . $itemType . '"');
+		error_log('action "CREATE_SYS_ITEM_LS" attempted to get a Lists items, but encountered an unknown item type "' . $itemType . '"');
 	}
 	
-	// Get list items
+	// Get List items
 	if (!$tailoredSql) {
 		$sql = "SELECT $fields " .
 			"FROM $itemType";
-		// If fetching list of project managers, ensure to get only project managers	
+		// If fetching List of project managers, ensure to get only project managers	
 		if ($projMgrLs) $sql .= " WHERE roleCode = 'projectManager'";
 		$lsItems = doSql($sql);
 	}
