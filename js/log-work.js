@@ -8,7 +8,7 @@ var logWork = function() {
 			'hours': $('.log-work').children('.hours').val()		
 		}
 	}).done(function(response) {
-		var success = JSON.parse(response).payload;
+		var success = response.payload;
 		if (success) {
 			notify.success('work hours recorded');
 		} else {

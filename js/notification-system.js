@@ -94,7 +94,7 @@ $.fn.userMsgRead = function() {
 			'ntfs': ntfs
 		}
 	}).done(function(response) {
-		var res = JSON.parse(response).payload;
+		var res = response.payload;
 		if (res != 1) {
 			notify.fail('failed to tell server that you read messages');
 		}
@@ -113,7 +113,7 @@ $.fn.userMsgSend = function() {
 			'msg': $('.new-msg').children('textarea').val()
 		}
 	}).done(function(response) {
-		var res = JSON.parse(response).payload;
+		var res = response.payload;
 		if (res == 'success') {
 			notify.success('sent your message');
 		} else {
@@ -132,7 +132,11 @@ $.fn.msgPoll = function() {
 			'action': 'MSG_POLL'
 		}
 	}).done(function(response) {			
-		var ntfs = JSON.parse(response).payload;
+		if(response.payload == undefined || response.payload == null)
+		  return;
+		
+		var ntfs = response.payload;
+				
 		for (var nIndex = 0; nIndex < ntfs.length; nIndex++) {
 			// Add unread notifications
 			var ntf = ntfs[nIndex];			
@@ -171,7 +175,7 @@ $.fn.editItem = function(itemType) {
 			'itemId': itemId
 		}
 	}).done(function(response) {
-		var res = JSON.parse(response).payload;
+		var res = response.payload;
 		if (res == 'success') {
 			notify.success('edit success');
 		} else {
@@ -195,7 +199,7 @@ $.fn.approvalReqAttended = function() {
 			'accepted': accepted
 		}
 	}).done(function(response) {
-		var res = JSON.parse(response).payload;
+		var res = response.payload;
 		if (res == 1) {
 			notify.success('your decision has been processed');
 		} else {
@@ -217,7 +221,7 @@ $.fn.watchTask = function() {
 			'id': id
 		}
 	}).done(function(response) {
-		var res = JSON.parse(response).payload;
+		var res = response.payload;
 		var success = res.success;
 		var nowWatching = res.nowWatching;
 		if (success == 1) {

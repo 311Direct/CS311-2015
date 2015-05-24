@@ -30,7 +30,7 @@ $(document).ready(function() {
 			console.log(response);	//dm
 		
 			var targetPage = $('.type').val().slice(0, -1) + '-details.php';	// Slice(...) to get rid of plural	
-			var results = JSON.parse(response).payload;
+			var results = response.payload;
 			$('.result-count').text(results.length);
 
 			// For the results, convert all hyperlink-able fields to hyperlinks

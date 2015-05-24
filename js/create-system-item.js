@@ -85,7 +85,7 @@ var create = {
 			method: 'post',
 			data: create.data
 		}).done(function(response) {
-			var result = JSON.parse(response).payload;
+			var result = response.payload;
 			if (result.forId === undefined || result.forType === undefined) {
 				console.log('Failed to create system item. PLease try again');
 			} else {

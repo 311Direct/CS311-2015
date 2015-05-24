@@ -27,7 +27,7 @@ $.fn.publish = function() {
 			'value': val
 		}
 	}).done(function(response) {
-		var editInfo = JSON.parse(response).payload;
+		var editInfo = response.payload;
 		var column = editInfo.column;
 		var success = editInfo.success;
 		var isProjMgr = editInfo.isProjMgr;

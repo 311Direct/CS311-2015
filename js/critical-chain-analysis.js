@@ -9,7 +9,7 @@ var critChainAnalysis = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var tasks = JSON.parse(response).payload.tasks;
+			var tasks = response.payload.tasks;
 			var critTasks = [];
 			
 			// For ea tasks

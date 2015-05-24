@@ -15,7 +15,7 @@ var sysItemLs = {
 				'itemType': itemType
 			}
 		}).done(function(response) {
-			var opts = JSON.parse(response).payload;
+			var opts = response.payload;
 			sysItemLs.fill(sel, opts);
 		}).fail(function() {
 			console.log('sysItemLs.get(): failed to execute action "CREATE_SYS_ITEM_LS"');

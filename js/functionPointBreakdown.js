@@ -24,7 +24,7 @@ $(document).ready(function () {
                     id: loadContent.itemId()
                 }
             }).done(function (response) {
-                tasks = JSON.parse(response).payload;
+                tasks = response.payload;
                 FP_tasks = tasks;
                 var $fPQuestions = $('.function-point-q');
                 var typeSelect = '<select><option value="ILF">file where data is stored</option>\

@@ -23,7 +23,7 @@ $(document).ready(function() {
 				'action': 'LOGOUT'
 			}
 		}).done(function(response) {
-			var logoutSuccess = JSON.parse(response).payload;
+			var logoutSuccess = response.payload;
 			if (logoutSuccess) {
 				$('.btn-logout').logout();
 			} else {

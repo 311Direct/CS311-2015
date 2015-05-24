@@ -222,7 +222,7 @@ $.ajax({
 		'id': loadContent.itemId()
 	}
 }).done(function(response) {
-	pertInfo = JSON.parse(response).payload;
+	pertInfo = response.payload;
 	init(pertInfo);	
 }).fail(function() {
 	console.log('Failed to execute action: PERT_GET');

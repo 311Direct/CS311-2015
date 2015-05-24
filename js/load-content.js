@@ -18,7 +18,7 @@ var loadContent = {
 				'action': 'TASK_LIST'
 			}
 		}).done(function(response) {
-			var tasks = JSON.parse(response).payload;
+			var tasks = response.payload;
 			
 			loadContent.displayIn('.tasks-assigned-to-user',
 				tasks.assignedToUser,
@@ -44,7 +44,7 @@ var loadContent = {
 				'action': 'PROJECT_LIST_I_AM_MANAGING'
 			}
 		}).done(function(response) {		
-			var projects = JSON.parse(response).payload;
+			var projects = response.payload;
 
 			// Display project managers as hyperlinks
 			for (var pIndex = 0; pIndex < projects.length; pIndex++) {
@@ -68,7 +68,7 @@ var loadContent = {
 				'action': 'PROJECT_LIST_ALL'
 			}
 		}).done(function(response) {
-			var projects = JSON.parse(response).payload;
+			var projects = response.payload;
 			
 			// Display project managers as hyperlinks
 			for (var pIndex = 0; pIndex < projects.length; pIndex++) {
@@ -94,7 +94,7 @@ var loadContent = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {		
-			var project = JSON.parse(response).payload;			
+			var project = response.payload;			
 
 			project = loadContent.cvtToHyperlink(project, 'projectManagerUserIds', 'projectManagerDisplayNames', 'user-details.php');
 			
@@ -149,7 +149,7 @@ var loadContent = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var milestone = JSON.parse(response).payload;
+			var milestone = response.payload;
 			$('.milestone-title').text(milestone.title);
 			milestone = loadContent.cvtToHyperlink(milestone, 'managerUserNames', 'managerDisplayNames', 'user-details.php');
 			var summary = 'Created by <a href="user-details.php?id=' + milestone.creatorUsername + '">' + milestone.displayName + '</a> on ' + milestone.createdDate + '<br>' +
@@ -189,7 +189,7 @@ var loadContent = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var task = JSON.parse(response).payload;
+			var task = response.payload;
 			$('.task-title').text(task.title);
 			
 			var summary = 'Belongs in project: <a href="project-details.php?id=' + task.projectId + '">' + task.projectTitle + '</a>';
@@ -276,7 +276,7 @@ var loadContent = {
 				'username': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var user = JSON.parse(response).payload;
+			var user = response.payload;
 			$('.display-name').text(user.displayName);
 			
 			// Display summary

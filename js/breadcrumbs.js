@@ -9,7 +9,7 @@ var bCrumbs = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var bCrumbs = JSON.parse(response).payload;
+			var bCrumbs = response.payload;
 			$('.breadcrumbs').html(bCrumbs);
 		}).fail(function() {
 			console.log('Failed to execute action: BREADCRUMBS');

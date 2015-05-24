@@ -6,7 +6,7 @@ $(document).ready(function() {
 			'action': 'ROLES_GET'
 		}
 	}).done(function(response) {
-		var roles = JSON.parse(response).payload;
+		var roles = response.payload;
 		for (var rIndex = 0; rIndex < roles.length; rIndex++) {
 			var role = roles[rIndex];
 			$('<option/>', {

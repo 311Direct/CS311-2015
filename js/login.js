@@ -9,7 +9,7 @@ function login() {
 			'password': $('#password').val()
 		}
 	}).done(function(response) {
-		var loginInfo = JSON.parse(response).payload;
+		var loginInfo = response.payload;
 		if (loginInfo.success) {
 			notify.success(' mate');
 			if (loginInfo.roleCode == 'projectManager' || loginInfo.roleCode == 'developmentManager') {

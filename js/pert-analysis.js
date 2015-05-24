@@ -11,7 +11,7 @@ var pertAnalysis = {
 				'id': loadContent.itemId()
 			}
 		}).done(function(response) {
-			var tasks = JSON.parse(response).payload.tasks;
+			var tasks = response.payload.tasks;
 			pertAnalysis.showZ(tasks);
 		}).fail(function() {
 			console.log('Failed to execute action: PERT_GET');

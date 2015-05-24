@@ -32,7 +32,7 @@ $(document).ready(function() {
 				'comment': comment
 			}
 		}).done(function(response) {
-			var success = JSON.parse(response).payload;
+			var success = response.payload;
 			if (success) {
 				notify.success('your comment has been published');			
 			} else {

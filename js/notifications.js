@@ -27,8 +27,11 @@ $(document).ready(function() {
 			'action': 'USER_LIST_GET'
 		}
 	}).done(function(response) {
+  	if(response.payload == undefined || response.payload == null)
+  	  return;
+  	
 		// In this code segment, "user" refers to "username"
-		var users = JSON.parse(response).payload;
+		var users = response.payload;
 		for (var uIndex = 0; uIndex < users.length; uIndex++) {
 			var user = users[uIndex];
 			$('<option/>', {
@@ -56,7 +59,7 @@ $(document).ready(function() {
 				'msg': $('.send-msg-container').find('textarea').val()
 			}
 		}).done(function(response) {
-			var success = JSON.parse(response).payload;
+			var success = response.payload;
 			if (success) {
 				$('.msg-send-user-list').val('');
 				$('.send-msg-container').find('textarea').val('');

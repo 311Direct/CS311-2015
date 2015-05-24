@@ -25,7 +25,7 @@ var ganttEngine = {
 				'id': loadContent.itemId()
 			}			
 		}).done(function(response) {
-			var milestones = JSON.parse(response).payload;
+			var milestones = response.payload;
 			// Put tasks into gantt chart
 			ganttEngine.show(milestones);
 		}).fail(function() {
