@@ -12,7 +12,7 @@ class DatabaseAdaptor
     }
     
     try {
-      $this->dbh = new PDO("mysql:host=127.0.0.1;dbname=vitawebs_csci311", $u, $p);
+      $this->dbh = new PDO("mysql:host=127.0.0.1;dbname=vitawebs_csci311_v2", $u, $p);
     } catch (PDOException $e)
     {
       print("Error connecting to the database. Please contact your system administrator.");

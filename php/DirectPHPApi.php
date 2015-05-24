@@ -1,8 +1,8 @@
 <?php
-
+  require('Direct/config/db.config.php');
 function doSql($sql) {
 	// Connect
-	$conn = mysqli_connect('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+	$conn = mysqli_connect('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 	
 	// Run SQL
 	if (is_array($sql)) {
@@ -1049,7 +1049,7 @@ IF ($act == 'TASK_LIST') {
 		'payload' => searchUsers()
 	]);
 } else if ($act == 'LOGIN') {
-	$mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+	$mysqli = new mysqli('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 	$result = $mysqli->query('SELECT username, roleCode ' .
 		'FROM user ' .
 		'WHERE username = "' . $_POST['username'] . '" AND password = "' . $_POST['password'] . '"');

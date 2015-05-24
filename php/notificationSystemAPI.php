@@ -1,4 +1,5 @@
 <?php
+  require('Direct/config/db.config.php');
 
 class notificationSystem {
 	function handleReq() {
@@ -12,7 +13,7 @@ class notificationSystem {
 	}
 
 	private function execSql($sql) {
-		$mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+		$mysqli = new mysqli('127.0.0.1', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 		if (($result = $mysqli->query($sql)) == false) {
 			error_log($mysqli->error);
 			$mysqli->close();
@@ -120,7 +121,7 @@ class notificationSystem {
 			error_log('sendApprovalReq(): encountered an unexpected item type');
 			die();
 		}		
-		$mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+		$mysqli = new mysqli('127.0.0.1', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 		$result = $mysqli->query($sql);
 		
 		while ($approver = $result->fetch_assoc()['username']) {
@@ -251,7 +252,7 @@ class notificationSystem {
 	}
 	
 	private function userListGet() {
-		$mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+		$mysqli = new mysqli('127.0.0.1', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 		$sql = 'SELECT username ' .
 			'FROM user ' .
 			"WHERE username != '$_SESSION[username]'";

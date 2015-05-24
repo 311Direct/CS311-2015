@@ -5,6 +5,10 @@
 /*
  * This is a dummy API. To be superseded by James' API
  */
+ 
+
+ 
+ 
 $act = $_POST['action'];
 IF ($act == 'TASK_LIST') { //done
 	echo json_encode([
@@ -546,11 +550,9 @@ Ipsum dolor sit amet lorem.',
 		]
 	]);
 } else if ($act == 'LOGIN') {
-	$mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311');
-	$result = $mysqli->query('SELECT * ' .
-		'FROM Users ' .
-		'WHERE username = "' . $_POST['username'] . '" AND password = sha1("' . $_POST['password'] . '")');
-	$loginSuccess = ($result->num_rows >= 1);
+	$check = new DatabaseAdaptor();
+	
+	$loginSuccess = $check->chkAuth($_POST['username'], $_POST['password']);
 	
 	if ($loginSuccess && session_start()) {
 		$_SESSION['username'] = $result->fetch_object()->username;

@@ -35,7 +35,7 @@ function upload() {
 if ($uploadOk != 0) {
     // Insert uploaded file into db
     session_start();
-    $mysqli = new mysqli('localhost', 'vitawebs_csci311', 'hoaisking1337', 'vitawebs_csci311_v2');
+    $mysqli = new mysqli('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
     
     // Prepare upload...
     $dlPath = substr($target_file, 3);
