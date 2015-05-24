@@ -174,7 +174,6 @@ function dependantsForTask($id) {
 
 function permsFor($username) {
   
-  global $PERMISSIONS_ENGINE;
   global $rolePermissions;
   
   $perms = $rolePermissions->getRoleInfo()->getPermissionsValue();
@@ -1073,7 +1072,7 @@ if ($act == 'TASK_LOG_WORK') {
 } else
 if ($act == 'USER_GET') {
 	$username = $_POST['username'];
-	$sql = "SELECT U.displayName, U.username, U.expertise, IFNULL(P.role, 'unknown') AS role " .
+	$sql = "SELECT U.displayName, U.username, U.expertise " .
 		'FROM user U LEFT JOIN permission P ON U.roleCode = P.roleCode ' .
 		'WHERE U.username = "' . $username . '" ' .
 		'LIMIT 1';
@@ -1082,6 +1081,7 @@ if ($act == 'USER_GET') {
 	$user['belongsToProjects'] = projsBelongingToFor($username);
 	$user['permissions'] = permsFor($username);
 	$user['pastProjects'] = pastProjsFor($username);
+	$user['role'] = $rolePermissions->getRoleInfo()->getName();
 
 	echo json_encode([
 		'action' => $act,
