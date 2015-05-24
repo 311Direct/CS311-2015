@@ -114,9 +114,12 @@ button {
 .attachment {
 	text-align: left;
 }
+table
+{
+  width: 100%;
+}
 th, td {
 	padding: 5px;
-	width: 50%;
 }
 th {
 	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
