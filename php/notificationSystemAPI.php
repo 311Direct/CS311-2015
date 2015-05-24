@@ -1,5 +1,5 @@
 <?php
-  require('Direct/config/db.config.php');
+require('Direct/config/db.config.php');
 
 class notificationSystem {
 	function handleReq() {
@@ -274,8 +274,10 @@ class notificationSystem {
 		]);
 	}
 };
-
-if (session_start() && isset($_SESSION['username'])) {
+if(session_status() != PHP_SESSION_ACTIVE)
+  session_start();
+  
+if (isset($_SESSION['username'])) {
 	$ns = new notificationSystem();	
 	$ns->handleReq();
 }
