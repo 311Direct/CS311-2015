@@ -33,7 +33,10 @@ $.fn.publish = function() {
 		var isProjMgr = editInfo.isProjMgr;
 		
 		if (success) {
-			if (isProjMgr) notify.success('edit published');
+			if (isProjMgr){
+  			 notify.success('Item Updated!');
+  			 reloadData();
+			 }
 			else notify.success('edit request sent to project manager');
 		} else {
 			notify.fail('attempted to publish edits, but failed');
