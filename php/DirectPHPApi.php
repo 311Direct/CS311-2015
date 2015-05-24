@@ -1,5 +1,5 @@
 <?php
-  require('Direct/config/db.config.php');
+require('Direct/config/db.config.php');
 function doSql($sql) {
 	// Connect
 	$conn = mysqli_connect('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
@@ -372,12 +372,14 @@ function projMgrFor($type, $id) {
 			'FROM projectManager PM ' .
 			'WHERE PM.projectId = ' . $id;
 		$res = doSql($sql);
-	} else if ($type == 'milestone') {
+	} else
+if ($type == 'milestone') {
 		$sql = 'SELECT username ' .
 			'FROM milestone M JOIN projectManager PM ON M.projectId = PM.projectId ' .
 			'WHERE M.id = ' . $id;
 		$res = doSql($sql);
-	} else if ($type == 'task') {
+	} else
+if ($type == 'task') {
 		$sql = 'SELECT username ' .
 			'FROM task T JOIN projectManager PM ON T.projectId = PM.projectId ' .
 			'WHERE T.id = ' . $id;
@@ -392,17 +394,20 @@ function projIdFor($type, $id) {
 	$pId = null;
 	if ($type == 'project') {
 		$pId = $id;
-	} else if ($type == 'milestone') {
+	} else
+if ($type == 'milestone') {
 		$sql = 'SELECT M.projectId ' .
 			'FROM milestone M ' .
 			'WHERE M.id = ' . $id;
 		$pId = doSql($sql)[0]['projectId'];
-	} else if ($type == 'task') {
+	} else
+if ($type == 'task') {
 		$sql = 'SELECT T.projectId ' .
 			'FROM task T ' .
 			'WHERE T.id = ' . $id;
 		$pId = doSql($sql)[0]['projectId'];
-	} else if ($type == 'user') {
+	} else
+if ($type == 'user') {
 		// Since only project managers can edit users, skip
 		// the process of determine if the user is a project manager.
 		// This can be one by just returning an empty array
@@ -441,7 +446,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO projectManager (projectId, username) ' .
 				"VALUES ($pId, '$mgr')";
 		}
-	} else if ($editCmd == 'TAILORED_milestones') {
+	} else
+if ($editCmd == 'TAILORED_milestones') {
 		// Put current milestones under no project. To implement
 		// this in a time efficient way, just set their
 		// projectIds to a project that will likely never exist
@@ -456,7 +462,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 				"SET projectId = $pId " .
 				"WHERE id = $mId";
 		}
-	} else if ($editCmd == 'TAILORED_tasks') {
+	} else
+if ($editCmd == 'TAILORED_tasks') {
 		// Put current tasks under no project. To implement
 		// this in a time efficient way, just set their
 		// projectIds to a project that will likely never exist
@@ -471,7 +478,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 				"SET projectId = $pId " .
 				"WHERE id = $tId";
 		}
-	} else if ($editCmd == 'TAILORED_tasksInMilestone') {
+	} else
+if ($editCmd == 'TAILORED_tasksInMilestone') {
 		// Clear current tasks in milestone
 		$sql[] = 'DELETE FROM tasksInMilestone ' .
 			"WHERE milestoneId = $id";
@@ -482,7 +490,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO tasksInMilestone (taskId, milestoneId) ' .
 				"VALUES ($tId, $id)";
 		}
-	} else if ($editCmd == 'TAILORED_assignees') {
+	} else
+if ($editCmd == 'TAILORED_assignees') {
 		// Clear current assignes to task
 		$sql[] = 'DELETE FROM taskAssignee ' .
 			"WHERE taskId = $id";
@@ -493,7 +502,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO taskAssignee (taskId, username) ' .
 				"VALUES ($id, '$username')";
 		}
-	} else if ($editCmd == 'TAILORED_flags') {
+	} else
+if ($editCmd == 'TAILORED_flags') {
 		// Clear current flags
 		$sql[] = 'DELETE FROM taskFlag ' .
 			"WHERE taskId = $id";
@@ -504,7 +514,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO taskFlag (taskId, flag) ' .
 				"VALUES ($id, '$flag')";
 		}
-	} else if ($editCmd == 'TAILORED_subtasks') {
+	} else
+if ($editCmd == 'TAILORED_subtasks') {
 		// Clear current subtasks
 		$sql[] = 'DELETE FROM subtask ' .
 			"WHERE parentTaskId = $id";
@@ -515,7 +526,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO subtask (taskId, parentTaskId) ' .
 				"VALUES ($subTId, $id)";
 		}
-	} else if ($editCmd == 'TAILORED_milestonesThatTaskBelongsTo') {
+	} else
+if ($editCmd == 'TAILORED_milestonesThatTaskBelongsTo') {
 		// Clear current milestones that this task belongs to
 		$sql[] = 'DELETE FROM tasksInMilestone ' .
 			"WHERE taskId = $id";
@@ -526,7 +538,8 @@ function sqlForTailoredEdit($type, $id, $col, $val, $pId) {
 			$sql[] = 'INSERT INTO tasksInMilestone (taskId, milestoneId) ' .
 				"VALUES ($id, $mId)";
 		}
-	} else if ($editCmd == 'TAILORED_ROLE') {
+	} else
+if ($editCmd == 'TAILORED_ROLE') {
 		$sql[] = 'UPDATE user ' .
 			"SET roleCode = '$val' " .
 			"WHERE username = '$id'";
@@ -622,7 +635,8 @@ function bCrumbsFor($pg, $id) {
 			'label' => 'task list',
 			'url' => 'task-list.php'
 		];
-	} else if ($pg == 'project' && $pageHasId) {
+	} else
+if ($pg == 'project' && $pageHasId) {
 		// Page type is 'project' for (1) project-list.php (2) project-details.php (3) project-visualization.php
 		// (1) will have ID = string, whilst (2) and (3) will have ID = integer, so
 		// only add a breadcrumb if on 'project-details.php' & 'project-visualization.php' page
@@ -630,7 +644,8 @@ function bCrumbsFor($pg, $id) {
 			'label' => "P-$id",
 			'url' => "project-details.php?id=$id"
 		];
-	} else if ($pg == 'milestone') {
+	} else
+if ($pg == 'milestone') {
 		$pId = projForMilestone($id)['projectId'];
 		$bCrumbs[] = [
 			'label' => "P-$pId",
@@ -640,7 +655,8 @@ function bCrumbsFor($pg, $id) {
 			'label' => "M-$id",
 			'url' => "milestone-details.php?id=$id"
 		];
-	} else if ($pg == 'task' && $pageHasId) {
+	} else
+if ($pg == 'task' && $pageHasId) {
 		// Page type is 'task' for (1) task-list.php (2) task-details.php
 		// (1) will have ID = string, whilst (2) will have ID = integer, so
 		// only add a breadcrumb if on 'task-details.php'
@@ -658,17 +674,20 @@ function bCrumbsFor($pg, $id) {
 			'label' => "T-$id",
 			'url' => "task-details.php?id=$id"
 		];	
-	} else if ($pg == 'user') {
+	} else
+if ($pg == 'user') {
 		$bCrumbs[] = [
 			'label' => "$id details",
 			'url' => "user-details.php?id=$id"
 		];
-	} else if ($pg == 'search.ph') {	// The search page should actually return 'search'. Recommended to fix the bug & refactor this code in the future
+	} else
+if ($pg == 'search.ph') {	// The search page should actually return 'search'. Recommended to fix the bug & refactor this code in the future
 		$bCrumbs[] = [
 			'label' => "Search",
 			'url' => "search.php"
 		];
-	} else if ($pg == 'effort') {
+	} else
+if ($pg == 'effort') {
 		$bCrumbs[] = [
 			'label' => "Effort estimation",
 			'url' => "effort-estimation.php?id=$id"
@@ -695,6 +714,8 @@ function costPerHrForTask($id) {
 	return floatVal($costPerHr);
 }
 
+header("Content-Type: application/json");
+
 $act = $_POST['action'];
 IF ($act == 'TASK_LIST') {
 	session_start();
@@ -719,7 +740,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $payload
 	]);
-} else if ($act == 'PROJECT_LIST_I_AM_MANAGING') {
+} else
+if ($act == 'PROJECT_LIST_I_AM_MANAGING') {
 	session_start();
 	$username = $_SESSION['username'];
 	$sql = 'SELECT DISTINCT P.id AS id, P.title AS title, P.progress AS progress ' .
@@ -748,7 +770,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $payload
 	]);
-} else if ($act == 'PROJECT_LIST_ALL') {
+} else
+if ($act == 'PROJECT_LIST_ALL') {
 	session_start();
 	$username = $_SESSION['username'];
 	$sql = 'SELECT DISTINCT P.id AS id, P.title AS title, P.progress AS progress ' .
@@ -776,7 +799,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $payload
 	]);
-} else if ($act == 'PROJECT_GET') {
+} else
+if ($act == 'PROJECT_GET') {
 	$id = $_POST['id'];
 	$sql = 'SELECT P.title, P.creatorUserId, U_CREATOR.displayName AS creatorDisplayName, P.createdDate, P.dateStart, P.dateExpectedFinish, P.dateFinished, P.status, P.allocatedBudget, P.usedBudget, P.allocatedTime, P.usedTime, P.description ' .
 		'FROM projectManager PM RIGHT JOIN project P ON PM.projectId = P.id ' .
@@ -805,22 +829,26 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $project
 	]);
-} else if ($act == 'PROJECT_EDIT') {
+} else
+if ($act == 'PROJECT_EDIT') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'PROJECT_ATTACH_DELIVERABLE') {
+} else
+if ($act == 'PROJECT_ATTACH_DELIVERABLE') {
 	echo json_encode([
 		'action' => 'PROJECT_ATTACH_DELIVERABLE',
 		'payload' => 1
 	]);
-} else if ($act == 'PROJECT_ASSIGN_TASK') {
+} else
+if ($act == 'PROJECT_ASSIGN_TASK') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'COMMENT_PUBLISH') {
+} else
+if ($act == 'COMMENT_PUBLISH') {
 	session_start();
 	$sql = 'INSERT INTO comment (username, datetime, comment, forType, forId) ' .
 		"VALUES ('$_SESSION[username]', NOW(), '$_POST[comment]', '$_POST[forType]', '$_POST[forId]')";
@@ -830,7 +858,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'MILESTONE_GET') {
+} else
+if ($act == 'MILESTONE_GET') {
 	$id = $_POST['id'];
 	$sql = 'SELECT M.id, M.title, M.creatorUsername, U.displayName, M.createdDate, M.startDate, M.dueDate, M.endDate, M.projectId, M.status, M.allocatedBudget, M.usedBudget, M.allocatedTime, M.usedTime, M.description ' .
 		'FROM milestone M JOIN user U ON M.creatorUsername = U.username ' .
@@ -875,17 +904,20 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $milestone
 	]);
-} else if ($act == 'MILESTONE_EDIT') {
+} else
+if ($act == 'MILESTONE_EDIT') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'MILESTONE_ASSIGN_TASK') {
+} else
+if ($act == 'MILESTONE_ASSIGN_TASK') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'TASK_GET') {
+} else
+if ($act == 'TASK_GET') {
 	$id = $_POST['id'];
 	$sql = 'SELECT T.title, P.Id AS projectId, P.title AS projectTitle, T.priority, T.status, T.allocatedBudget, T.usedBudget, T.allocatedTime, T.usedTime, T.startDate, T.dueDate, T.endDate, T.description, T.id ' .
 		'FROM task T JOIN project P ON T.projectId = P.id ' .
@@ -936,27 +968,32 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $task
 	]);
-} else if ($act == 'TASK_EDIT') {
+} else
+if ($act == 'TASK_EDIT') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'TASK_WATCH') {
+} else
+if ($act == 'TASK_WATCH') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'TASK_ATTACH_FILE') {
+} else
+if ($act == 'TASK_ATTACH_FILE') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'TASK_ASSIGN_SUBTASK') {
+} else
+if ($act == 'TASK_ASSIGN_SUBTASK') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);	
-} else if ($act == 'TASK_LOG_WORK') {	
+} else
+if ($act == 'TASK_LOG_WORK') {	
 	$id = $_POST['id'];
 	$time = intVal($_POST['hours']);
 	$costPerHr = costPerHrForTask($id);
@@ -1006,7 +1043,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'USER_GET') {
+} else
+if ($act == 'USER_GET') {
 	$username = $_POST['username'];
 	$sql = "SELECT U.displayName, U.username, U.expertise, IFNULL(P.role, 'unknown') AS role " .
 		'FROM user U LEFT JOIN permission P ON U.roleCode = P.roleCode ' .
@@ -1023,32 +1061,38 @@ IF ($act == 'TASK_LIST') {
 		'payload' => $user
 	]);
 
-} else if ($act == 'USER_EDIT') {
+} else
+if ($act == 'USER_EDIT') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'SEARCH_PROJECTS') {
+} else
+if ($act == 'SEARCH_PROJECTS') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => searchProjs()
 	]);
-} else if ($act == 'SEARCH_MILESTONES') {
+} else
+if ($act == 'SEARCH_MILESTONES') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => searchMilestones()
 	]);
-} else if ($act == 'SEARCH_TASKS') {
+} else
+if ($act == 'SEARCH_TASKS') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => searchTasks()
 	]);
-} else if ($act == 'SEARCH_USERS') {
+} else
+if ($act == 'SEARCH_USERS') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => searchUsers()
 	]);
-} else if ($act == 'LOGIN') {
+} else
+if ($act == 'LOGIN') {
 	$mysqli = new mysqli('localhost', $GLOBALS['DBUSER'], $GLOBALS['DBPASS'], 'vitawebs_csci311_v2');
 	$result = $mysqli->query('SELECT username, roleCode ' .
 		'FROM user ' .
@@ -1071,14 +1115,16 @@ IF ($act == 'TASK_LIST') {
 			'roleCode' => $user['roleCode']
 		]
 	]);	
-} else if ($act == 'LOGOUT') {
+} else
+if ($act == 'LOGOUT') {
 	session_start();
 	session_unset();
 	echo json_encode([
 		'action' => $act,
 		'payload' => 1
 	]);
-} else if ($act == 'PROJECT_MANAGERS_GET') {
+} else
+if ($act == 'PROJECT_MANAGERS_GET') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => [
@@ -1104,7 +1150,8 @@ IF ($act == 'TASK_LIST') {
 			]								
 		]
 	]);
-} else if ($act == 'PERMISSIONS_GET') {	
+} else
+if ($act == 'PERMISSIONS_GET') {	
 	echo json_encode([
 		'action' => $act,
 		'payload' => [
@@ -1130,7 +1177,8 @@ IF ($act == 'TASK_LIST') {
 			'View projects they are managing'
 		]
 	]);
-} else if ($act == 'ROLES_GET') {
+} else
+if ($act == 'ROLES_GET') {
 	echo json_encode([
 		'action' => $act,
 		'payload' => [
@@ -1146,7 +1194,8 @@ IF ($act == 'TASK_LIST') {
 			'Training specialist',
 		]
 	]);
-} else if ($act == 'PROJECT_CREATE') {
+} else
+if ($act == 'PROJECT_CREATE') {
 	session_start();
 	
 	// Create project
@@ -1215,7 +1264,8 @@ IF ($act == 'TASK_LIST') {
 			'forId' => $id
 		]
 	]);
-} else if ($act == 'MILESTONE_CREATE') {
+} else
+if ($act == 'MILESTONE_CREATE') {
 	session_start();
 
 	// Create milestone
@@ -1275,7 +1325,8 @@ IF ($act == 'TASK_LIST') {
 			'forId' => $id
 		]
 	]);
-} else if ($act == 'TASK_CREATE') {
+} else
+if ($act == 'TASK_CREATE') {
 	// Create milestone
 	$sql = 'INSERT INTO task (' .
 		'id, ' .
@@ -1369,7 +1420,8 @@ IF ($act == 'TASK_LIST') {
 			'forId' => $id
 		]
 	]);
-} else if ($act == 'USER_CREATE') {
+} else
+if ($act == 'USER_CREATE') {
 	session_start();
 
 	// Get role code for a given role
@@ -1416,7 +1468,8 @@ IF ($act == 'TASK_LIST') {
 			'forId' => $username
 		]
 	]);
-} else if ($act == 'EDIT') {
+} else
+if ($act == 'EDIT') {
 	/*
 	 * An implicit assumption in the design of
 	 * this code block, is that users (that are
@@ -1471,7 +1524,8 @@ IF ($act == 'TASK_LIST') {
 			'success' => 1
 		]
 	]);
-} else if ($act == 'GANTT') {
+} else
+if ($act == 'GANTT') {
 	$payload = [];
 	$milestones = milestonesForProj($_POST['id']);
 	foreach($milestones as $milestone) {		
@@ -1494,7 +1548,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => $payload
 	]);
-} else if ($act == 'PERT_GET') {
+} else
+if ($act == 'PERT_GET') {
 	// Set project start date
 	$id = $_POST['id'];
 	$sql = 'SELECT dateStart ' .
@@ -1520,7 +1575,8 @@ IF ($act == 'TASK_LIST') {
 	    'tasks' => $tasks
 	  ]
 	]);
-} else if ($act == 'FUNCTION_POINTS') {
+} else
+if ($act == 'FUNCTION_POINTS') {
 	// Get milestones
 	$milestones = milestonesForProj($_POST['id']);	
 	// Init empty arr
@@ -1548,7 +1604,8 @@ IF ($act == 'TASK_LIST') {
 	  'action' => $act,
 	  'payload' => $tasks
 	]);
-} else if ($act == 'BREADCRUMBS') {
+} else
+if ($act == 'BREADCRUMBS') {
 	$pg = $_POST['pageType'];
 	$id = $_POST['id'];
 	
@@ -1556,7 +1613,8 @@ IF ($act == 'TASK_LIST') {
 		'action' => $act,
 		'payload' => bCrumbsFor($pg, $id)
 	]);	
-} else if ($act == 'ITEM_CREATION_LIST') {
+} else
+if ($act == 'ITEM_CREATION_LIST') {
 	$lsItems = [];
 	$fields = 'username AS label, username AS val';
 	$itemType = $_POST['itemType'];
@@ -1568,13 +1626,17 @@ IF ($act == 'TASK_LIST') {
 		$projMgrLs = true;
 		$fields = 'DISTINCT username AS label, username AS val';
 		$itemType = 'user';	// Select from the user table, not the projectManager table
-	} else if ($itemType == 'milestone') {
+	} else
+if ($itemType == 'milestone') {
 		$fields = "CONCAT('M-', id, ': ', title) AS label, id AS val";
-	} else if ($itemType == 'task') {
+	} else
+if ($itemType == 'task') {
 		$fields = "CONCAT('T-', id, ': ', title) AS label, id AS val";
-	} else if ($itemType == 'user') {
+	} else
+if ($itemType == 'user') {
 		$fields = 'DISTINCT username AS label, username AS val';
-	} else if ($itemType == 'project') {
+	} else
+if ($itemType == 'project') {
 		$fields = "CONCAT('P-', id, ': ', title) AS label, id AS val";
 	} else {
 		error_log('action "CREATE_SYS_ITEM_LS" attempted to get a lists items, but encountered an unknown item type "' . $itemType . '"');
