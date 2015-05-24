@@ -1,9 +1,16 @@
 <div class="row content-container">
 	<div class="col-xs-12"><a href="task-list.php">Tasks</a></div>
 </div>
-<div class="row content-container visible-xs visible-sm">
-	<?php require_once('create-buttons.php'); ?>
-</div>
+<?php 
+  
+if($PERMISSIONS_ENGINE->canCompleteRequestForOperation($rolePermissions->getRoleInfo()->getPermissionsValue(), (P_FULL_CONTROL | P_CREATE)))
+{ 
+  echo '<div class="row content-container visible-xs visible-sm">';
+  include_once('create-buttons.php');
+  echo '</div>';
+}
+
+?>
 <div id="project-list" class="row content-container">
 	<ul class="col-xs-12">
 		<li><a href="#tab-projects-managing">projects managing</a></li>
@@ -15,7 +22,7 @@
 				<tr>
 					<th>ID</th>
 					<th>Project manager</th>
-					<th>Title</th>
+					<th width="50%">Title</th>
 					<th>Progress</th>
 				</tr>
 			</thead>
@@ -30,7 +37,7 @@
 				<tr>
 					<th>ID</th>
 					<th>Project manager</th>
-					<th>Title</th>
+					<th width="50%">Title</th>
 					<th>Progress</th>
 				</tr>
 			</thead>
