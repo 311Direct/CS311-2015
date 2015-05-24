@@ -276,4 +276,19 @@
 		display: block !important;	/* display nano scrollbar on hover over */
 	}	
 	
+	td:nth-child(1), td:nth-child(2)
+	{
+  	width: 7%;
+	}
+	
+	td:nth-last-child(2)
+	{
+  	width: 20%;
+	}
+	
+	td:last-child
+	{
+  	width:10%;
+	}
+	
 }
